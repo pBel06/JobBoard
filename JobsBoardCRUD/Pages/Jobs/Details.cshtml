@@ -1,0 +1,49 @@
+﻿@page
+@model JobsBoardCRUD.Pages.Jobs.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>JobList</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobList.Job)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobList.Job)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobList.JobTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobList.JobTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobList.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobList.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobList.CreatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobList.CreatedAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobList.ExpiresAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobList.ExpiresAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.JobList.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
